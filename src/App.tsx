@@ -1,7 +1,7 @@
 import './App.scss';
 import React from "react";
 import {
-    BrowserRouter,
+    HashRouter,
     Route,
     Routes
 } from "react-router-dom";
@@ -11,12 +11,12 @@ import Pokemon from "./Pokemon";
 
 export default function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/pokemon/:id" element={<Pokemon />} />
                 <Route path="/pokedex" element={<Pokedex />} />
                 <Route path="/" element={<Home/>} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
