@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  background: #222;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.pokedex {
+  background: #fe0065;
+  border: 2px #000 solid;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px #000;
+}
+
+.pokedex-nav {
+  display: flex;
+  justify-content: space-between;
+
+  div:last-child {
+    a, button, .button {
+      margin-left: .5rem;
+    }
+  }
+
+  a, button, .button {
+    font-size: 1rem;
+    box-sizing: border-box;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 2rem;
+    display: inline-block;
+    font-weight: bold;
+    background: #ffdd00;
+    border-radius: 50%;
+    border: 2px #000 solid;
+    color: rgba(0, 0, 0, 0.47);
+    text-decoration: none;
+    box-shadow: 0 0 10px #ffdd59;
+
+    .svg-inline--fa {
+      vertical-align: 0;
+    }
+
+    &:hover, &.powered-off:hover {
+      background: #ebcc00;
+      cursor: pointer;
+    }
+
+    &:disabled, &.powered-off, &.disabled {
+      background: #9a8500;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+  }
+}
+
+.pokedex-screen {
+  background-color: #afe5be;
+  border: 3px #000 solid;
+  margin-bottom: 1rem;
+  height: 15rem;
+  width: 15rem;
+  overflow-y: scroll;
+  color: #415643;
+  font-family: 'Press Start 2P', cursive;
+  font-size: .6rem;
+
+  &.powered-off {
+    background-color: #759a7f;
+    overflow-y: auto;
+  }
+}
+
+.pokemon-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  a {
+    text-decoration: none;
+    color: #415643;
+    padding: 1rem;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  a:hover {
+    background: #a0d2ae;
+  }
+}
+
+.pokemon {
+  text-align: center;
+
+  p {
+    margin: .5rem;
+  }
+  h2 {
+    margin-top: 0;
+  }
+
+  .pokemon-image {
+    mix-blend-mode: luminosity;
+    image-rendering: pixelated;
+  }
+}
