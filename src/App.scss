@@ -64,6 +64,16 @@ body {
   }
 }
 
+@keyframes poweredOff {
+  from {
+    background-color: #afe5be;
+  }
+
+  to {
+    background-color: #759a7f;
+  }
+}
+
 .pokedex-screen {
   background-color: #afe5be;
   border: 3px #000 solid;
@@ -78,6 +88,8 @@ body {
   &.powered-off {
     background-color: #759a7f;
     overflow-y: auto;
+    animation-duration: 3s;
+    animation-name: poweredOff;
   }
 }
 
